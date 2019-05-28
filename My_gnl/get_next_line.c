@@ -6,7 +6,7 @@
 /*   By: crycherd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/22 22:18:16 by crycherd          #+#    #+#             */
-/*   Updated: 2019/05/23 17:46:23 by crycherd         ###   ########.fr       */
+/*   Updated: 2019/05/28 20:08:45 by crycherd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,15 +90,16 @@ static void		create_line(char **line, t_list *list, int *bit)
 
 int				get_next_line(const int fd, char **line)
 {
-	char	buf[BUFF_SIZE + 1];
-	char	*safe_file;
-	static	t_list *list;
-	t_list	*file;
-	int		size;
+	char			buf[BUFF_SIZE + 1];
+	char			*safe_file;
+	static t_list	*list;
+	t_list			*file;
+	int				size;
 
 	if (fd < 0 || !(line) || (read(fd, buf, 0) < 0))
 		return (-1);
 	file = what_file(&list, fd);
+	size = ft_strlen(file->content);
 	while (!ft_strchr(file->content, '\n') && (size = read(fd, buf, BUFF_SIZE)))
 	{
 		safe_file = file->content;
@@ -108,10 +109,8 @@ int				get_next_line(const int fd, char **line)
 	create_line(line, file, &size);
 	if (size != 0)
 		return (1);
-	else
-	{
-		lstremovis(&list, fd);
+	lstremovis(&list, fd);
+	if (list == file)
 		list = NULL;
-		return (0);
-	}
+	return (0);
 }
