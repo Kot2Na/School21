@@ -6,7 +6,7 @@
 /*   By: crycherd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 20:48:11 by crycherd          #+#    #+#             */
-/*   Updated: 2019/05/02 14:23:12 by crycherd         ###   ########.fr       */
+/*   Updated: 2019/05/24 18:24:47 by crycherd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,4 +84,7 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_lstaddend(t_list **alst, t_list *new);
 void				ft_lstremovis(t_list **alst, size_t n);
+size_t				ft_count_wrd(char const *s, char c);
+void				ft_lstprint(t_list **begin);
+void				ft_swap(void *a, void *b);
 #endif
