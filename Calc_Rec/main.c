@@ -6,11 +6,12 @@
 /*   By: crycherd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/16 16:42:13 by crycherd          #+#    #+#             */
-/*   Updated: 2019/02/16 17:19:27 by crycherd         ###   ########.fr       */
+/*   Updated: 2019/05/31 20:17:52 by crycherd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tr_calc.h"
+#include "libft.h"
 
 int	main(int ac, char **av)
 {

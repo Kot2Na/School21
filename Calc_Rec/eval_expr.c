@@ -6,11 +6,12 @@
 /*   By: crycherd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/16 18:21:45 by crycherd          #+#    #+#             */
-/*   Updated: 2019/02/17 23:35:39 by crycherd         ###   ########.fr       */
+/*   Updated: 2019/05/31 20:20:09 by crycherd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tr_calc.h"
+#include "libft.h"
 
 int	solve_con(char *str)
 {
@@ -79,17 +80,17 @@ int eval_expr(char *str)
 {
 	char *md;
 	char *end;
-	char buf[20];
+	char *buf;
 
 	md = ft_strchr(str, '(');
 	end = ft_chrrsk(md);
 	if (md != NULL && end != NULL)
 	{
-		printf("B");
 		*end = '\0';
 		*md = '\0';
-		ft_itoa(eval_expr(md + 1), buf);
+		buf = ft_itoa(eval_expr(md + 1));
 		ft_union(str, buf, end + 1);
+		free(buf);
 		return (eval_expr(str));
 	}
 	return (solve(str));
