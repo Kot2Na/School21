@@ -6,7 +6,7 @@
 /*   By: crycherd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/16 18:21:45 by crycherd          #+#    #+#             */
-/*   Updated: 2019/05/31 20:20:09 by crycherd         ###   ########.fr       */
+/*   Updated: 2019/05/31 21:47:29 by crycherd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,17 @@ int solve(char *str)
 {
 	char *p;
 
+
+	printf("{%s}\n", str);
 	if ((p = ft_strrchr(str, '+')) != NULL)
 	{
 		*p = '\0';
 		return (solve(str) + solve(p + 1));
 	}
-	if ((p = ft_strrchr(str, '-')) != NULL && *(p + 1) == ' ')
+	if ((p = ft_strrinus(str, '-')) != NULL)
 	{
-		*p = '\0';
+		*p  = '\0';
+		printf("|%s##%s|\n", str, p + 1);
 		return (solve(str) - solve(p + 1));
 	}
 	if ((p = ft_strrchr(str, '*')) != NULL)

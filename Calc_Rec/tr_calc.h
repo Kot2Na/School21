@@ -6,7 +6,7 @@
 /*   By: crycherd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/16 17:21:29 by crycherd          #+#    #+#             */
-/*   Updated: 2019/05/31 20:23:06 by crycherd         ###   ########.fr       */
+/*   Updated: 2019/05/31 21:13:57 by crycherd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,6 @@ int		solve(char *str);
 void	ft_union(char *str, char *buf, char *end);
 int		eval_expr(char *str);
 char	*ft_chrrsk(char *p);
+char	*ft_strrinus(const char *p, int item);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: crycherd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/16 18:32:24 by crycherd          #+#    #+#             */
-/*   Updated: 2019/05/31 20:23:28 by crycherd         ###   ########.fr       */
+/*   Updated: 2019/05/31 21:50:43 by crycherd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,24 @@ char *ft_chrrsk(char *p)
 		}
 	}
 	return (NULL);
+}
+
+char	*ft_strrinus(const char *p, int item)
+{
+	int i;
+
+	i = 0;
+
+	if (p)
+	{
+		while (p[i])
+			i++;
+		if (i > 0)
+			i--;
+		while (i > 0 && p[i] != item && p[i + 1] != ' ')
+			i--;
+	}
+	if (i <= 0 && p[i] != item)
+		return (NULL);
+	return ((char *)p + i);
 }
