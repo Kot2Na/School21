@@ -6,14 +6,14 @@
 /*   By: crycherd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/16 18:32:24 by crycherd          #+#    #+#             */
-/*   Updated: 2019/05/31 21:50:43 by crycherd         ###   ########.fr       */
+/*   Updated: 2019/06/03 18:58:22 by crycherd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tr_calc.h"
 #include "libft.h"
 
-char *ft_chrrsk(char *p)
+char	*ft_chrrsk(char *p)
 {
 	int i;
 	int nbr;
@@ -22,7 +22,7 @@ char *ft_chrrsk(char *p)
 	if (p)
 	{
 		i = 0;
-		while(p[i])
+		while (p[i])
 		{
 			if (p[i] == '(')
 				nbr++;
@@ -41,17 +41,14 @@ char	*ft_strrinus(const char *p, int item)
 	int i;
 
 	i = 0;
-
 	if (p)
 	{
 		while (p[i])
 			i++;
-		if (i > 0)
-			i--;
-		while (i > 0 && p[i] != item && p[i + 1] != ' ')
+		while (i > 0 && ft_strstr(p + i, "- ") == NULL)
 			i--;
 	}
-	if (i <= 0 && p[i] != item)
+	if (i == 0 && ft_strstr(p + i, "- ") == NULL)
 		return (NULL);
 	return ((char *)p + i);
 }

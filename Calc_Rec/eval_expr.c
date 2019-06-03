@@ -6,17 +6,17 @@
 /*   By: crycherd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/16 18:21:45 by crycherd          #+#    #+#             */
-/*   Updated: 2019/05/31 21:47:29 by crycherd         ###   ########.fr       */
+/*   Updated: 2019/06/03 18:57:42 by crycherd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tr_calc.h"
 #include "libft.h"
 
-int	solve_con(char *str)
+int		solve_con(char *str)
 {
 	char *p;
-	
+
 	if ((p = ft_strrchr(str, '/')) != NULL)
 	{
 		*p = '\0';
@@ -30,12 +30,10 @@ int	solve_con(char *str)
 	return (ft_atoi(str));
 }
 
-int solve(char *str)
+int		solve(char *str)
 {
 	char *p;
 
-
-	printf("{%s}\n", str);
 	if ((p = ft_strrchr(str, '+')) != NULL)
 	{
 		*p = '\0';
@@ -43,8 +41,7 @@ int solve(char *str)
 	}
 	if ((p = ft_strrinus(str, '-')) != NULL)
 	{
-		*p  = '\0';
-		printf("|%s##%s|\n", str, p + 1);
+		*p = '\0';
 		return (solve(str) - solve(p + 1));
 	}
 	if ((p = ft_strrchr(str, '*')) != NULL)
@@ -52,10 +49,10 @@ int solve(char *str)
 		*p = '\0';
 		return (solve(str) * solve(p + 1));
 	}
-	return(solve_con(str));
+	return (solve_con(str));
 }
 
-void ft_union(char *str, char *buf, char *end)
+void	ft_union(char *str, char *buf, char *end)
 {
 	int i;
 	int j;
@@ -79,7 +76,7 @@ void ft_union(char *str, char *buf, char *end)
 	str[i + j] = '\0';
 }
 
-int eval_expr(char *str)
+int		eval_expr(char *str)
 {
 	char *md;
 	char *end;
