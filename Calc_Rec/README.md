@@ -1,8 +1,8 @@
 # Calculator
-Program takes string as first command line argument and returns solved equation.  
+The program takes a string as the first command line argument and returns a solved equation.  
 There are brackets to set priorities and five operations with numbers.  
-Each operation must be separated by one space from numbers.  
-Each bracket must be correctly closed.  
+Each operation must be separated from numbers by one space.  
+Each bracket must be closed correctly.  
 
 ## Example of operations
 
@@ -35,4 +35,4 @@ Each bracket must be correctly closed.
 (2 * 42) - 30 + (20 - 80) / 30  ->  52  
 (89 % 3) * 35 + (10 * (70 / 5)) ->  210
 
-> If you find out some mistakes or incorrect work, please let me know about that.
+> If you find out some mistakes or incorrect work, please let me know that.
