@@ -35,4 +35,5 @@ Each bracket must be closed correctly.
 (2 * 42) - 30 + (20 - 80) / 30  ->  52  
 (89 % 3) * 35 + (10 * (70 / 5)) ->  210
 
-> If you find out some mistakes or incorrect work, please let me know that.
+> If you find out some mistakes or incorrect work, please let me know that.  
+> Email: nikitin.na@phystech.edu
