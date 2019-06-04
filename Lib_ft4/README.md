@@ -1,7 +1,7 @@
 # Libft
 
-This is the first serious project in the shcool 42.  
-There are many functions from standard libraries such us stdlib.h, string.h etc., some functions was a little changed. 
+This is the first serious project in shcool 42.  
+There are many functions from standard libraries such us stdlib.h, string.h etc., some functions were a little changed. 
 Also there are original functions.
 
 > The school has strict rules for writing code.  
