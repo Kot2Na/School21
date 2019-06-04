@@ -1,8 +1,8 @@
 # Calculator
 The program takes a string as the first command line argument and returns a solved equation.  
-There are brackets to set priorities and five operations with numbers.  
+There are parentheses to set priorities and five operations with numbers.  
 Each operation must be separated from numbers by one space.  
-Each bracket must be closed correctly.  
+Parenthesis must be closed correctly.  
 
 ## Example of operations
 
