@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo “Do you want nyan? \(YES/NO\)”
+read answer
+
+if [[ $answer == YES ]];
+
+then 
+
+	echo "congrats!"
+
+else
+	echo "fail!"
+fi
+

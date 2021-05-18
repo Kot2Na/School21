@@ -1,0 +1,2 @@
+graphical: enter login and password
+ssh: ssh <user_name>@<srver_ip>

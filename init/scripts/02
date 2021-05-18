@@ -1,0 +1,6 @@
+#!/bin/bash
+
+user=$1
+passwd -l $(user)
+pkill -KILL -u $(user)
+userdel $(user)
